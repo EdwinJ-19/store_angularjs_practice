@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="main-head">
+  <h1></h1>
+</div>
+<div class="container main-component">
+  <!-- <button class="btn btn-primary" [disabled]="hideButton">Submit</button> -->
+  <input type="text" (input)="onInputChanges($event)" class="form-control" placeholder="Search some products">
+  <!-- <div class="main-button"> -->
+    <!-- <button class="btn btn-primary" (click)="onClickSubmit()">Submit</button> -->
+  <!-- </div> -->
+
+  <!-- <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products"> -->
+  <!-- <div class="main-button">
+    <button class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
+  </div> -->
+  <!-- <p>{{searchProduct}}</p> -->
+</div>
+
+<app-productlist></app-productlist>
+

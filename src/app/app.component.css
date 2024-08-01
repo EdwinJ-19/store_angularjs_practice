@@ -1,0 +1,31 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+}
+h2{
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+} */
+
+.main-component{
+    /* margin: 2rem 0; */
+    margin-top: 2rem;
+}
+.main-component .form-control{
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.main-button button{
+    margin: 1rem 0;
+}
+.main-button button:hover{
+    background-color: rgb(0, 255, 0);
+    color: black;
+    border: none;
+}
