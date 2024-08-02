@@ -1,0 +1,73 @@
+angular js installation:
+1) npm install -g @angular/cli@12
+
+
+
+ANGULARJS is the name of the first version, so we say ANGULAR!
+Instead of MVC in angularJS, 
+-> so main important thing is COMPONENTS (every objects that will be created in separate separate components.)
+-> AJAX (asynschronous javascript)
+
+runn and create:-
+1) to check if the angular is there: ng v 
+-> if the node is not working, then open powershell and add this code-
+Step 1
+
+First, you have to need to open the command prompt and run this command.
+
+-> set-ExecutionPolicy RemoteSigned -Scope CurrentUser 
+
+Step 2
+
+Now you have to run the second command on your system. This command is:
+
+-> Get-ExecutionPolicy
+
+Step 3
+
+To view their policy, you need to run this command in your command prompt:
+
+-> Get-ExecutionPolicy -list  
+
+2) to create new project:-
+ng new projectname
+
+3) to run the project:-
+- change the directory to src: cd src
+- then run the server by using: ng serve
+=> another way is that you can directly open the project using this code: ng serve -o
+
+
+-- node_modules is actually called as dependencies
+-- SRC is main important 
+-- inside the SRC folder, app is a component for each logic applying the main html page that is index.html(outside the SRC).
+
+4) to create new components:
+- to generate components: ng g c (ng generate components)
+
+5) after creating new components:
+- add the line in ur html to show the new components using html tag:
+<app-[components-name]></app-[components-name]>
+
+6) in components folder, you can make one html file but multiple files for css, and remember to add it in [components-name].components.ts urls.
+
+7) to install boostrap, write npm install bootstrap in terminal
+
+8) now to add boostrap css in the global file that is angular.json, now search styles in angular and add one line that is "node_modules/bootstrap/dist/css/bootstrap.min.css" same as scripts as well.
+
+
+DATA BINDING:-
+1) string interpolation -> {{store}}
+2) property binding (values etc etc) -> [value] (to display the values)
+3) event binding (like clickon button, or response button etc) -> (click) [does the function event listener]
+4) two way binding (mixture of property and event) -> [()] (shortcut method to show and functioning!)
+
+
+--> if you want make custom datatype then create a interface which helps you to customize the known properties, like below:
+interface Product{
+  name:string,
+  price:number,
+  description:string,
+  category:string,
+  image?:string
+}
