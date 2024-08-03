@@ -2,19 +2,20 @@
     padding: 1rem 2rem;
 }
 nav{
-    background-color: rgb(42,85,229);
+    background-color: #E4FDE1;
+    /* color: black; */
 }
 nav .navbar-brand{
-    color: white;
+    color: black;
 }
 nav ul li a{
-    color: white;
+    color: black;
 }
 nav form button{
     background-color: white;
     color: green;
 }
 nav form button:hover{
-    background-color: green;
+    background-color: #114B5F;
     color: white;
 }

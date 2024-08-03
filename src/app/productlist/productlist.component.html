@@ -1,8 +1,25 @@
 <div class="container mb-5">
     <!-- product 1 electronics -->
     <div class="row">
-      <h1 class="display-4 fw-bold my-4">{{product1.category}}</h1>
-      <div class="col">
+      <h1 class="display-4 fw-bold my-4">{{category1}}</h1>
+      <div *ngIf="electronicsProducts.length === 0">
+        <h1>No Electronics Product Available</h1>
+      </div>
+      <div class="col" *ngFor = "let electronics of electronicsProducts">
+        <div class="card" style="width: 18rem;">
+          <img [src]="electronics.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{electronics.name}}</h5>
+            <p class="card-text">{{electronics.description}}</p>
+            <p class="card-text fw-bold">Rs. {{electronics.price}}</p>
+            <p><span class="badge">{{electronics.category}}</span></p>
+            <div class="buy-button">
+              <a href="#">Buy?</a>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <!-- <div class="col">
         <div class="card" style="width: 18rem;">
           <img [src]="product1.image" class="card-img-top" alt="...">
           <div class="card-body">
@@ -37,24 +54,30 @@
             <a href="#" class="btn btn-primary">Buy?</a>
           </div>
         </div>    
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img [src]="product1.image" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{product1.name}}</h5>
-            <p class="card-text">{{product1.description}}</p>
-            <p class="card-text fw-bold">Rs. {{product1.price}}</p>
-            <p><span class="badge text-bg-info">{{product1.category}}</span></p>
-            <a href="#" class="btn btn-primary">Buy?</a>
-          </div>
-        </div>    
-      </div>
+      </div> -->
     </div>
     <!-- product 2 tshirt -->
     <div class="row">
-      <h1 class="display-4 fw-bold my-4">{{product2.category}}</h1>
-      <div class="col">
+      <h1 class="display-4 fw-bold my-4">{{category2}}</h1>
+      <div *ngIf="clothesProducts.length === 0">
+        <h2>No Clothes Available</h2>
+      </div>
+      <div class="col" *ngFor = "let clothes of clothesProducts" >
+        <div class="card" style="width: 18rem;">
+          <img [src]="clothes.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{clothes.name}}</h5>
+            <p class="card-text">{{clothes.description}}</p>
+            <p class="card-text fw-bold">Rs. {{clothes.price}}</p>
+            <p><span class="badge">{{clothes.category}}</span></p>
+            <!-- <a href="#" class="btn">Buy?</a> -->
+            <div class="buy-button">
+              <a href="#">Buy?</a>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <!-- <div class="col">
         <div class="card" style="width: 18rem;">
           <img [src]="product2.image" class="card-img-top" alt="...">
           <div class="card-body">
@@ -89,18 +112,6 @@
             <a href="#" class="btn btn-primary">Buy?</a>
           </div>
         </div>    
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img [src]="product2.image" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{product2.name}}</h5>
-            <p class="card-text">{{product2.description}}</p>
-            <p class="card-text fw-bold">Rs. {{product2.price}}</p>
-            <p><span class="badge text-bg-info">{{product2.category}}</span></p>
-            <a href="#" class="btn btn-primary">Buy?</a>
-          </div>
-        </div>    
-      </div>
+      </div> -->
     </div>    
   </div>

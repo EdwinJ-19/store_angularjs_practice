@@ -1,0 +1,20 @@
+.row .col .card .card-body .buy-button a{
+    text-decoration: none;
+    color: white;
+    background-color: #114B5F;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.row .col .card .card-body .buy-button a:hover{
+    color: black;
+    background-color: #028090;
+    transition: all 0.5s ease-in-out;
+}
+.row .col .card{
+    padding: 1rem;
+}
+.row .col .card .card-body .badge{
+    /* background-color: #E4FDE1; */
+    background-color: #114B5F;
+    /* color: black; */
+}
