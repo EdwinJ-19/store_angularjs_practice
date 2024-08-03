@@ -13,6 +13,7 @@
             <p class="card-text">{{electronics.description}}</p>
             <p class="card-text fw-bold">Rs. {{electronics.price}}</p>
             <p><span class="badge">{{electronics.category}}</span></p>
+            <p><span class="badge" [ngStyle]="{color : giveColorStock(electronics.stock)}">{{electronics.stock}}</span></p>
             <div class="buy-button">
               <a href="#">Buy?</a>
             </div>
@@ -70,6 +71,7 @@
             <p class="card-text">{{clothes.description}}</p>
             <p class="card-text fw-bold">Rs. {{clothes.price}}</p>
             <p><span class="badge">{{clothes.category}}</span></p>
+            <p><span class="badge" [ngStyle]="{color : giveColorStock(clothes.stock)}">{{clothes.stock}}</span></p>
             <!-- <a href="#" class="btn">Buy?</a> -->
             <div class="buy-button">
               <a href="#">Buy?</a>
