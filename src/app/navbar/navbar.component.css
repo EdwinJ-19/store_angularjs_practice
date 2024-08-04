@@ -19,3 +19,7 @@ nav form button:hover{
     background-color: #114B5F;
     color: white;
 }
+
+nav .date{
+    margin: 0 1rem;
+}

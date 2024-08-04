@@ -91,6 +91,22 @@ export class ProductlistComponent implements OnInit {
     }
   }
 
+  giveElectronicsPriceColor(price:number){
+    if(price>40000){
+      return true
+    }else{
+      return false
+    }
+  }
+
+  giveClothesPriceColor(price:number){
+    if(price>400){
+      return true
+    }else{
+      return false
+    }
+  }
+
   // product1:Product={
   //   name:"Samsung S23+",
   //   price: 80000,

@@ -18,3 +18,12 @@
     background-color: #114B5F;
     /* color: black; */
 }
+
+.row .col .card img{
+    height: 10rem;
+    object-fit: contain;
+}
+
+.highPrice{
+    color: red;
+}
