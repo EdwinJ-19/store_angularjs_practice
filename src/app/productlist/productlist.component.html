@@ -5,11 +5,15 @@
       <div *ngIf="electronicsProducts.length === 0">
         <h1>No Electronics Product Available</h1>
       </div>
-      <div class="col" *ngFor = "let electronics of electronicsProducts">
+      <div class="col" *ngFor = "let electronics of electronicsProducts |customPipe">
         <div class="card" style="width: 18rem;">
           <img [src]="electronics.image" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{electronics.name}}</h5>
+            <!-- {{electronics | json}} -->
+            <!-- <h5 class="card-title">{{electronics.name | lowercase}}</h5> -->
+            <!-- <h5 class="card-title">{{electronics.name | uppercase}}</h5> -->
+            <!-- <h5 class="card-title">{{electronics.name | titlecase | slice:1:3}}</h5> -->
+            <h5 class="card-title">{{electronics.name | titlecase}}</h5>
             <p class="card-text">{{electronics.description}}</p>
             <!-- <p [ngClass] = "{'highprice' : electronics.price > 40000}" class="card-text fw-bold">Rs. {{electronics.price}}</p> -->
             <p [ngClass] = "{'highPrice': giveElectronicsPriceColor(electronics.price)}" class="card-text fw-bold">{{electronics.price | currency:'INR'}}</p>
@@ -64,7 +68,7 @@
       <div *ngIf="clothesProducts.length === 0">
         <h2>No Clothes Available</h2>
       </div>
-      <div class="col" *ngFor = "let clothes of clothesProducts" >
+      <div class="col" *ngFor = "let clothes of clothesProducts | customPipe" >
         <div class="card" style="width: 18rem;">
           <img [src]="clothes.image" class="card-img-top" alt="...">
           <div class="card-body">
