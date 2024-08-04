@@ -92,6 +92,10 @@ BUILT-IN PIPES:
 -> {{product | json}} => json pipes (which helps to find out what objects we have)
 
 CUSTOM PIPES: (ng g p "pipe_name")
+=> in the custom pipes files, there you will see the transform which is similarly as interfaces.
+=> without implementing tranform, the values will not show in browser.
+=> you can do arguments in html like elements below,
+      <div class="col" *ngFor = "let electronics of electronicsProducts | customPipe: 20000">
 
 
 
