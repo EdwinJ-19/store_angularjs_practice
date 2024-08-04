@@ -71,3 +71,31 @@ interface Product{
   category:string,
   image?:string
 }
+
+ANGULAR DIRECTIVE:-
+1) Component
+2) Structural -> DOM changes(new) - *ngFor (looping), *ngIf (condition) -> with the use of *
+3) Attribute -> [ngstyle] -> to dynamically show the results or overall condition -> with use of property binding
+
+*ngFor="":- for loop to display all of the object
+
+PIPES:- (using string interpolation and | in html)
+
+BUILT-IN PIPES:
+-> uses for filtering and array finding and some custom objects
+-> also uses to transform strings,currency amounts, dates and other data for display
+-> pipes are a simple function to use in template expression to accept and input value and return a transformed value.
+-> {{product.price | currency:'INR'}} => currency pipes
+-> {{currDate | date='short/full/medium'}} => date pipes
+-> {{product.name | lowercase/uppercase/titlecase}} => case pipes
+-> {{product.name | titlecase | slice:1:3}} => slicing pipes
+-> {{product | json}} => json pipes (which helps to find out what objects we have)
+
+CUSTOM PIPES: (ng g p "pipe_name")
+
+
+
+
+
+
+...args -> spread operator
