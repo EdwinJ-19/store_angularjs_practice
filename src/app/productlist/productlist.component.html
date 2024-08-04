@@ -1,15 +1,19 @@
 <div class="container mb-5">
     <!-- product 1 electronics -->
+    <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products">
+        <p>{{searchProduct}}</p>
     <div class="row">
       <h1 class="display-4 fw-bold my-4">{{category1}}</h1>
-      <div *ngIf="electronicsProducts.length === 0">
+      <!-- <div *ngIf="electronicsProducts.length === 0">
         <h1>No Electronics Product Available</h1>
-      </div>
-      <div class="col" *ngFor = "let electronics of electronicsProducts |customPipe">
+      </div> -->
+      <div class="col" *ngFor = "let electronics of electronicsProducts | searchFilter:searchProduct">
+      <!-- <div class="col" *ngFor = "let electronics of electronicsProducts |customPipe"> -->
+      <!-- <div class="col" *ngFor = "let electronics of electronicsProducts | customPipe: 20000"> -->
+            <!-- {{electronics | json}} -->
         <div class="card" style="width: 18rem;">
           <img [src]="electronics.image" class="card-img-top" alt="...">
           <div class="card-body">
-            <!-- {{electronics | json}} -->
             <!-- <h5 class="card-title">{{electronics.name | lowercase}}</h5> -->
             <!-- <h5 class="card-title">{{electronics.name | uppercase}}</h5> -->
             <!-- <h5 class="card-title">{{electronics.name | titlecase | slice:1:3}}</h5> -->
@@ -68,7 +72,7 @@
       <div *ngIf="clothesProducts.length === 0">
         <h2>No Clothes Available</h2>
       </div>
-      <div class="col" *ngFor = "let clothes of clothesProducts | customPipe" >
+      <div class="col" *ngFor = "let clothes of clothesProducts |searchFilter:searchProduct" >
         <div class="card" style="width: 18rem;">
           <img [src]="clothes.image" class="card-img-top" alt="...">
           <div class="card-body">

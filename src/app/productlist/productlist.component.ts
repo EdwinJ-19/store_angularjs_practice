@@ -8,6 +8,8 @@ import { Product } from './product';
 })
 export class ProductlistComponent implements OnInit {
 
+  searchProduct = "";
+
   electronicsProducts : Product[] = [
   {
     name:"Samsung S23+",

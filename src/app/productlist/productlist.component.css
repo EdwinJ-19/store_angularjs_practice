@@ -12,6 +12,7 @@
 }
 .row .col .card{
     padding: 1rem;
+    margin: auto;
 }
 .row .col .card .card-body .badge{
     /* background-color: #E4FDE1; */
