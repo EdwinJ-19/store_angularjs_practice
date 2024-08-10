@@ -97,7 +97,9 @@ CUSTOM PIPES: (ng g p "pipe_name")
 => you can do arguments in html like elements below,
       <div class="col" *ngFor = "let electronics of electronicsProducts | customPipe: 20000">
 
-
+There are two types of pipes:
+1) pure pipes
+2) impure pipes
 
 
 

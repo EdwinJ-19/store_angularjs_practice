@@ -9,6 +9,8 @@ import { Product } from './product';
 export class ProductlistComponent implements OnInit {
 
   searchProduct = "";
+  tempValue !: Product[];
+  tempValue1 !: Product[];
 
   electronicsProducts : Product[] = [
   {
@@ -124,9 +126,26 @@ export class ProductlistComponent implements OnInit {
   //   category:"Clothes",
   //   image:"../assets/images/tshirt.webp"
   // }
-  constructor() { }
+  constructor() {
+    this.tempValue = this.electronicsProducts;
+    this.tempValue1 =  this.clothesProducts;
+   }
 
   ngOnInit(): void {
+  }
+
+  // allProducts = this.electronicsProducts.concat(this.clothesProducts);
+  
+  onInputChanges(event:any){
+    const typedValue = event.target.value;
+    // const typedValue = args[0];
+
+    this.tempValue = this.electronicsProducts.filter((prod)=>{
+      return prod.name.toLowerCase().includes(typedValue.toLowerCase());
+    })
+    this.tempValue1 = this.clothesProducts.filter((prod)=>{
+      return prod.name.toLowerCase().includes(typedValue.toLowerCase());
+    })
   }
 
 }
