@@ -1,4 +1,56 @@
 <div class="container mb-5">
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Add new Electronics Product
+    </a>
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Add new Clothes Product
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample" style="margin: 1rem 0;">
+    <div class="card card-body">
+      <div>
+        <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
+      </div>
+      <div>
+        <label for="product-description">Description</label><input [(ngModel)] = "productObj.description" class="form-control" id="product-description" type="text">
+      </div>
+      <div>
+        <label for="product-price">Price</label><input [(ngModel)] = "productObj.price" class="form-control" id="product-price" type="number">
+      </div>
+      <div>
+        <label for="product-category">Category</label><input [(ngModel)] = "productObj.category" class="form-control" id="product-category" type="text">
+      </div>
+      <div>
+        <label for="product-stock">Stock</label><input [(ngModel)] = "productObj.stock" class="form-control" id="product-stock" type="text">
+      </div>
+      <div>
+        <button style="margin: 1rem 0;" (click)="onClickSubmitElectronics()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div class="collapse" id="collapse" style="margin: 1rem 0;">
+    <div class="card card-body">
+      <div>
+        <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
+      </div>
+      <div>
+        <label for="product-description">Description</label><input [(ngModel)] = "productObj.description" class="form-control" id="product-description" type="text">
+      </div>
+      <div>
+        <label for="product-price">Price</label><input [(ngModel)] = "productObj.price" class="form-control" id="product-price" type="number">
+      </div>
+      <div>
+        <label for="product-category">Category</label><input [(ngModel)] = "productObj.category" class="form-control" id="product-category" type="text">
+      </div>
+      <div>
+        <label for="product-stock">Stock or no Stock</label><input [(ngModel)] = "productObj.stock" class="form-control" id="product-stock" type="text">
+      </div>
+      <div>
+        <button style="margin: 1rem 0;" (click)="onClickSubmitClothes()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
     <!-- product 1 electronics -->
     <!-- <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products"> -->
     <input type="text" (input)="onInputChanges($event)" class="form-control" placeholder="Search some products">

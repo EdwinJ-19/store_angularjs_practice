@@ -12,6 +12,14 @@ export class ProductlistComponent implements OnInit {
   tempValue !: Product[];
   tempValue1 !: Product[];
 
+  productObj:Product ={
+    name:"",
+    price:0,
+    description:"",
+    category:"",
+    stock:"",
+  }
+
   electronicsProducts : Product[] = [
   {
     name:"Samsung S23+",
@@ -146,6 +154,27 @@ export class ProductlistComponent implements OnInit {
     this.tempValue1 = this.clothesProducts.filter((prod)=>{
       return prod.name.toLowerCase().includes(typedValue.toLowerCase());
     })
+  }
+
+  onClickSubmitElectronics(){
+    this.tempValue.push(this.productObj);
+    this.productObj = {
+      name:"",
+      price:0,
+      description:"",
+      category:"",
+      stock:"",
+    }
+  }
+  onClickSubmitClothes(){
+    this.tempValue1.push(this.productObj);
+    this.productObj = {
+      name:"",
+      price:0,
+      description:"",
+      category:"",
+      stock:"",
+    }
   }
 
 }
