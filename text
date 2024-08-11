@@ -105,3 +105,7 @@ There are two types of pipes:
 
 
 ...args -> spread operator
+
+components.ts=>
+1) constructor means that the data will be call first than execute
+2) ngOnInit means that the data will wait after executing the data will show all of the values.

@@ -3,9 +3,9 @@
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
       Add new Electronics Product
     </a>
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
       Add new Clothes Product
-    </a>
+    </a> -->
   </p>
   <div class="collapse" id="collapseExample" style="margin: 1rem 0;">
     <div class="card card-body">
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="collapse" id="collapse" style="margin: 1rem 0;">
+  <!-- <div class="collapse" id="collapse" style="margin: 1rem 0;">
     <div class="card card-body">
       <div>
         <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
@@ -50,7 +50,7 @@
         <button style="margin: 1rem 0;" (click)="onClickSubmitClothes()" class="btn btn-primary">Submit</button>
       </div>
     </div>
-  </div>
+  </div> -->
     <!-- product 1 electronics -->
     <!-- <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products"> -->
     <input type="text" (input)="onInputChanges($event)" class="form-control" placeholder="Search some products">
@@ -122,10 +122,10 @@
     </div>
     <!-- product 2 tshirt -->
     <div class="row">
-      <h1 class="display-4 fw-bold my-4">{{category2}}</h1>
-      <div *ngIf="clothesProducts.length === 0">
+      <!-- <h1 class="display-4 fw-bold my-4">{{category2}}</h1> -->
+      <!-- <div *ngIf="clothesProducts.length === 0">
         <h2>No Clothes Available</h2>
-      </div>
+      </div> -->
       <!-- <div class="col" *ngFor = "let clothes of clothesProducts |searchFilter:searchProduct" > -->
       <div class="col" *ngFor = "let clothes of tempValue1">
         <div class="card" style="width: 18rem;">
