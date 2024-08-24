@@ -21,7 +21,7 @@ export class ProductlistComponent implements OnInit {
   }
 
   @Input() products !: Product[];
-  clothesProducts: any;
+  // clothesProducts: any;
   allProducts !: Product[];
 
   // electronicsProducts : Product[] = [

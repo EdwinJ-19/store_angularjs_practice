@@ -109,3 +109,11 @@ There are two types of pipes:
 components.ts=>
 1) constructor means that the data will be call first than execute
 2) ngOnInit means that the data will wait after executing the data will show all of the values.
+
+
+Events:-
+1) clickevent
+2) input event (child property to parent property-> @Input() products !: Product[];)
+3) output event (using parent property to display the values -> @Output)
+--> EventEmitter() : it is a class which we used to send our own data to the new component
+emit() : it is a object function from EventEmitter().

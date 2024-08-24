@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../productlist/product';
+import { EventEmitter } from '@angular/core';
+import { Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-product',
@@ -7,6 +9,8 @@ import {Product} from '../productlist/product';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
+
+  @Output() sendData = new EventEmitter();
 
   tempValue:Product[] = [];
 
@@ -21,17 +25,19 @@ export class AddProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   onClickSubmitElectronics(){
-    this.tempValue.push(this.productObj);
+    // console.log(this.sendData);
+    this.sendData.emit(this.productObj)
     this.productObj = {
       name:"",
       price:0,
       description:"",
       category:"",
       stock:"",
-    } 
+    }
   }
 
 }

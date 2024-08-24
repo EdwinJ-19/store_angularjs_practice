@@ -90,4 +90,8 @@ export class AppComponent {
     //   },
   
     // ];
+
+    onGetData(data:any){
+      this.electronicsProducts.push(data);
+    }
 }
