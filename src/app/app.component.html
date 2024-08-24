@@ -22,7 +22,7 @@
   </div> -->
 </div>
 
-<app-productlist [products]="electronicsProducts"></app-productlist>
+<app-productlist (sendId)="getData($event)" [products]="electronicsProducts"></app-productlist>
 <!-- <app-productlist [products]="clothesProducts"></app-productlist> -->
 
 

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from './product';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-productlist',
@@ -13,6 +15,7 @@ export class ProductlistComponent implements OnInit {
   tempValue1 !: Product[];
 
   productObj:Product ={
+    id:null,
     name:"",
     price:0,
     description:"",
@@ -23,6 +26,8 @@ export class ProductlistComponent implements OnInit {
   @Input() products !: Product[];
   // clothesProducts: any;
   allProducts !: Product[];
+
+  @Output() sendId = new EventEmitter();
 
   // electronicsProducts : Product[] = [
   // {
@@ -166,6 +171,7 @@ export class ProductlistComponent implements OnInit {
   onClickSubmitElectronics(){
     this.tempValue.push(this.productObj);
     this.productObj = {
+      id:null,
       name:"",
       price:0,
       description:"",
@@ -176,6 +182,7 @@ export class ProductlistComponent implements OnInit {
   onClickSubmitClothes(){
     this.tempValue1.push(this.productObj);
     this.productObj = {
+      id:null,
       name:"",
       price:0,
       description:"",
@@ -184,4 +191,7 @@ export class ProductlistComponent implements OnInit {
     }
   }
 
+  onDeleteProduct(id:number|null){
+    this.sendId.emit(id);
+  }
 }

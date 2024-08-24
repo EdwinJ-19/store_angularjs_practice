@@ -12,9 +12,11 @@ export class AddProductComponent implements OnInit {
 
   @Output() sendData = new EventEmitter();
 
+
   tempValue:Product[] = [];
 
   productObj:Product ={
+    id:0,
     name:"",
     price:0,
     description:"",
@@ -32,6 +34,7 @@ export class AddProductComponent implements OnInit {
     // console.log(this.sendData);
     this.sendData.emit(this.productObj)
     this.productObj = {
+      id:0,
       name:"",
       price:0,
       description:"",

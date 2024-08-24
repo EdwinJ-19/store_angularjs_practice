@@ -1,7 +1,7 @@
 <div class="container mb-5">
 
 
-  
+
     <!-- product 1 electronics -->
     <!-- <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products"> -->
     <input type="text" (input)="onInputChanges($event)" class="form-control" placeholder="Search some products">
@@ -30,6 +30,7 @@
             <p><span class="badge" [ngStyle]="{color : giveColorStock(electronics.stock)}">{{electronics.stock}}</span></p>
             <div class="buy-button">
               <a href="#">Buy?</a>
+              <a href="#" (click)="onDeleteProduct(electronics.id)">Delete</a>
             </div>
           </div>
         </div>    

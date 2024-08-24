@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    
+
   <p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
       Add new Electronics Product
@@ -7,6 +7,9 @@
   </p>
   <div class="collapse" id="collapseExample" style="margin: 1rem 0;">
     <div class="card card-body">
+      <div>
+          <label for="product-id">Id</label><input [(ngModel)] = "productObj.id" class="form-control" id="product-id" type="number">
+      </div>
       <div>
         <!-- <label for="product-name">Name</label><input [()] = "productObj.name" class="form-control" id="product-name" type="text"> -->
         <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">

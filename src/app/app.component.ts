@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './productlist/product';
+// import { log } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,12 @@ export class AppComponent {
   title = 'store';
   searchProduct = "";
   // hideButton = true;
+
+
+  ngOnInit(): void {
+    // console.log(this.products);
+    this.electronicsProducts = this.electronicsProducts;
+  }
 
   onClickSubmit(){
     console.log("Button Clicked");
@@ -22,6 +29,7 @@ export class AppComponent {
 
   electronicsProducts : Product[] = [
     {
+      id:1,
       name:"Samsung S23+",
       price: 80000,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -30,6 +38,7 @@ export class AppComponent {
       stock:"In Stock"
     },
     {
+      id:2,
       name:"Iphone 15 Pro Max",
       price: 120000,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -38,6 +47,7 @@ export class AppComponent {
       stock:"Not In Stock"
     },
     {
+      id:3,
       name:"Redmi 11T Pro",
       price: 40000,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -46,6 +56,7 @@ export class AppComponent {
       stock:"In Stock"
     },
     {
+      id:4,
       name:"Vivo V23",
       price: 20000,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -93,5 +104,15 @@ export class AppComponent {
 
     onGetData(data:any){
       this.electronicsProducts.push(data);
+    }
+
+    getData(id:any){
+      this.electronicsProducts = this.electronicsProducts.filter((prod) =>{
+        return prod.id !== id;
+      })  
+      console.log(this.electronicsProducts);
+      // console.log(id);
+      // this.electronicsProducts.pop();
+      
     }
 }
