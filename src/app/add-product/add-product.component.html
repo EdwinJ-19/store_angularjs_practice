@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Add new Electronics Product
+    </a>
+  </p>
+  <div class="collapse" id="collapseExample" style="margin: 1rem 0;">
+    <div class="card card-body">
+      <div>
+        <!-- <label for="product-name">Name</label><input [()] = "productObj.name" class="form-control" id="product-name" type="text"> -->
+        <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
+      </div>
+      <div>
+        <label for="product-description">Description</label><input [(ngModel)] = "productObj.description" class="form-control" id="product-description" type="text">
+      </div>
+      <div>
+        <label for="product-price">Price</label><input [(ngModel)] = "productObj.price" class="form-control" id="product-price" type="number">
+      </div>
+      <div>
+        <label for="product-category">Category</label><input [(ngModel)] = "productObj.category" class="form-control" id="product-category" type="text">
+      </div>
+      <div>
+        <!-- <label for="product-stock">Stock</label><input [(ngModel)] = "productObj.stock" class="form-control" id="product-stock" type="text"> -->
+        <label for="product-stock">Stock</label>
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." [(ngModel)] = "productObj.stock">
+          <datalist id="datalistOptions">
+            <option value="In Stock">
+            <option value="Not In Stock">
+          </datalist>
+      </div>
+      <div>
+        <button style="margin: 1rem 0;" (click)="onClickSubmitElectronics()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+</div>

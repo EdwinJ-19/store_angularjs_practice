@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { CustomPipePipe } from './custom-pipe.pipe';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { AddProductComponent } from './add-product/add-product.component';
 // import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SearchFilterPipe } from './search-filter.pipe';
     NavbarComponent,
     ProductlistComponent,
     CustomPipePipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
