@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './productlist/product';
+import { DataHandlerService } from './data-handler.service';
 // import { log } from 'console';
 
 @Component({
@@ -101,6 +102,8 @@ export class AppComponent {
     //   },
   
     // ];
+
+    constructor(private dataService: DataHandlerService){}
 
     onGetData(data:any){
       this.electronicsProducts.push(data);

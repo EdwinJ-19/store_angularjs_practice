@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from './product';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { DataHandlerService } from '../data-handler.service';
 
 @Component({
   selector: 'app-productlist',
@@ -23,7 +24,7 @@ export class ProductlistComponent implements OnInit {
     stock:"",
   }
 
-  @Input() products !: Product[];
+  // @Input() products !: Product[];
   // clothesProducts: any;
   allProducts !: Product[];
 
@@ -143,14 +144,15 @@ export class ProductlistComponent implements OnInit {
   //   category:"Clothes",
   //   image:"../assets/images/tshirt.webp"
   // }
-  constructor() {
-    // this.tempValue = this.electronicsProducts;
+  constructor(private dataService: DataHandlerService) {
+    this.tempValue = this.dataService.electronicsProducts;
     // this.tempValue1 =  this.clothesProducts;
    }
 
   ngOnInit(): void {
     // console.log(this.products);
-    this.allProducts = this.products;
+    // this.allProducts = this.products;
+    this.allProducts = this.dataService.electronicsProducts;
     this.tempValue = this.allProducts;
   }
 
@@ -160,9 +162,9 @@ export class ProductlistComponent implements OnInit {
     const typedValue = event.target.value;
     // const typedValue = args[0];
 
-    // this.tempValue = this.electronicsProducts.filter((prod)=>{
-    //   return prod.name.toLowerCase().includes(typedValue.toLowerCase());
-    // })
+    this.tempValue = this.dataService.electronicsProducts.filter((prod)=>{
+      return prod.name.toLowerCase().includes(typedValue.toLowerCase());
+    })
     // this.tempValue1 = this.clothesProducts.filter((prod)=>{
     //   return prod.name.toLowerCase().includes(typedValue.toLowerCase());
     // })

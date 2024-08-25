@@ -117,3 +117,24 @@ Events:-
 3) output event (using parent property to display the values -> @Output)
 --> EventEmitter() : it is a class which we used to send our own data to the new component
 emit() : it is a object function from EventEmitter().
+
+advantages of OUTPUT and INPUT:-
+1) you can add this output and input method in such small components for it like search filter.
+
+disadvantage of OUTPUT and INPUT:-
+1) if you are doing output event directly then you will get an output only but not the response from the input, so to use that we have to uses services.
+
+SERVICES:-
+ng g s <services-name>
+=> uses to pass the old data to the new data using constructor values.
+=> if you want to access the old data to the new data, you have to mentioned the method name as private or public then variables name:-
+constructor(private dataHandler: dataHandlerService)
+
+Advantages of Services:
+1) 
+
+Disadvantages of Services:
+1) you have to create multiple file for multiple classes and also add the class name to every file inside of your parent class.
+
+when you are using Input and Output event method, so you have to add this object in ngOnInit not in constructor.
+Why? because constructor runs first before the input added inside and ngOnInit works like when the input and output does the works. 

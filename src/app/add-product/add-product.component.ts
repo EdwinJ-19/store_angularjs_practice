@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../productlist/product';
 import { EventEmitter } from '@angular/core';
 import { Output } from '@angular/core';
+import { DataHandlerService } from '../data-handler.service';
 
 @Component({
   selector: 'app-add-product',
@@ -10,7 +11,7 @@ import { Output } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
-  @Output() sendData = new EventEmitter();
+  // @Output() sendData = new EventEmitter();
 
 
   tempValue:Product[] = [];
@@ -24,7 +25,7 @@ export class AddProductComponent implements OnInit {
     stock:"",
   }
 
-  constructor() { }
+  constructor(private dataService: DataHandlerService) { }
 
   ngOnInit(): void {
 
@@ -32,7 +33,8 @@ export class AddProductComponent implements OnInit {
 
   onClickSubmitElectronics(){
     // console.log(this.sendData);
-    this.sendData.emit(this.productObj)
+    // this.sendData.emit(this.productObj)
+    this.dataService.electronicsProducts.push(this.productObj);
     this.productObj = {
       id:0,
       name:"",
