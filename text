@@ -137,4 +137,7 @@ Disadvantages of Services:
 1) you have to create multiple file for multiple classes and also add the class name to every file inside of your parent class.
 
 when you are using Input and Output event method, so you have to add this object in ngOnInit not in constructor.
-Why? because constructor runs first before the input added inside and ngOnInit works like when the input and output does the works. 
+Why? because constructor runs first before the input added inside and ngOnInit works like when the input and output does the works.
+
+
+ngDoCheck():- its updates ur object from directives in UI i.e. HTML like HTML:- *ngFor = "let allproducts of tempvalue", so to fix that we have to tell the angular to check whether it is changing or not.

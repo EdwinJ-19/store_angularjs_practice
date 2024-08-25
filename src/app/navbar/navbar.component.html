@@ -26,15 +26,20 @@
             <a class="nav-link disabled">Disabled</a>
           </li> -->
         </ul>
-        <div class="date">
+        <!-- <div class="date">
           <p>{{currDate | date:'medium'}}</p> 
-          <!-- <p>{{currDate | date:'short'}}</p> -->
-          <!-- <p>{{currDate | date:'full'}}</p> -->
+          <p>{{currDate | date:'short'}}</p>
+          <p>{{currDate | date:'full'}}</p>
+        </div> -->
+        <div class="bdg-button">
+          <button type="button" class="btn position-relative">
+            <i class="bi bi-cart-fill"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              1
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
         </div>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>

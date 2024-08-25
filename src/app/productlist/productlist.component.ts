@@ -156,6 +156,11 @@ export class ProductlistComponent implements OnInit {
     this.tempValue = this.allProducts;
   }
 
+  ngDoCheck(){
+    this.allProducts = this.dataService.electronicsProducts;
+    this.tempValue = this.allProducts;
+  }
+
   // allProducts = this.electronicsProducts.concat(this.clothesProducts);
   
   onInputChanges(event:any){
@@ -194,6 +199,10 @@ export class ProductlistComponent implements OnInit {
   }
 
   onDeleteProduct(id:number|null){
-    this.sendId.emit(id);
+    // this.sendId.emit(id);
+    this.dataService.electronicsProducts = this.dataService.electronicsProducts.filter((prod)=>{
+      return prod.id !== id;
+    })
+    console.log(this.dataService.electronicsProducts);
   }
 }

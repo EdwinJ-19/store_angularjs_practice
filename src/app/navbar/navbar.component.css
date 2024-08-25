@@ -11,15 +11,21 @@ nav .navbar-brand{
 nav ul li a{
     color: black;
 }
-nav form button{
+/* nav form button{
     background-color: white;
     color: green;
 }
 nav form button:hover{
     background-color: #114B5F;
     color: white;
-}
+} */
 
-nav .date{
+/* nav .date{
     margin: 0 1rem;
+} */
+
+nav .bdg-button button:hover{
+    box-shadow: 1px 1px 5px #114B5F;
+    background-color: white;
+    color: black;
 }
