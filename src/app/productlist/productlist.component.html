@@ -29,7 +29,8 @@
             <p><span class="badge">{{electronics.category}}</span></p>
             <p><span class="badge" [ngStyle]="{color : giveColorStock(electronics.stock)}">{{electronics.stock}}</span></p>
             <div class="buy-button">
-              <a href="#">Buy?</a>
+              <!-- <a href="#">Buy?</a> -->
+              <a href="#" (click)="onAddtoCart()">Add to Cart</a>
               <a href="#" (click)="onDeleteProduct(electronics.id)">Delete</a>
             </div>
           </div>

@@ -127,7 +127,7 @@ disadvantage of OUTPUT and INPUT:-
 SERVICES:-
 ng g s <services-name>
 => uses to pass the old data to the new data using constructor values.
-=> if you want to access the old data to the new data, you have to mentioned the method name as private or public then variables name:-
+=> if you want to access the old data to the new data, you have to mentioned the method name as private or public (access modifiers) then variables name:-
 constructor(private dataHandler: dataHandlerService)
 
 Advantages of Services:
@@ -141,3 +141,14 @@ Why? because constructor runs first before the input added inside and ngOnInit w
 
 
 ngDoCheck():- its updates ur object from directives in UI i.e. HTML like HTML:- *ngFor = "let allproducts of tempvalue", so to fix that we have to tell the angular to check whether it is changing or not.
+
+
+Difference Between Input/Output and Services:-
+Services:
+=> 1) class, constructor
+=> 2) push, ngdocheck
+=> 3) cartcount
+
+Input/Output:
+=> 1) @input/@output, binding, data pass
+=> 2) @output, emit, event binding, function, data pass

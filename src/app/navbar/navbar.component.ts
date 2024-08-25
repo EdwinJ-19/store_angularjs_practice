@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataHandlerService } from '../data-handler.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,8 +10,17 @@ export class NavbarComponent{
 
   storeTitle:string = "Store";
   currDate = new Date();
+  cartCount = 0;
   
-  constructor() { 
+  constructor(private dataService: DataHandlerService) { 
+    
+  }
+
+  ngDoCheck(){
+    this.cartCount = this.dataService.cartCount;
+  }
+
+  ngOnInit(): void {
     
   }
 

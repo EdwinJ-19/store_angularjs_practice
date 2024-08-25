@@ -205,4 +205,9 @@ export class ProductlistComponent implements OnInit {
     })
     console.log(this.dataService.electronicsProducts);
   }
+
+  onAddtoCart(){
+    this.dataService.cartCount++;
+    // console.log(this.dataService.cartCount);
+  }
 }

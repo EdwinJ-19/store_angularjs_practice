@@ -6,6 +6,7 @@ import { Product } from './productlist/product';
 })
 export class DataHandlerService {
 
+  cartCount = 0;
   electronicsProducts : Product[] = [
     {
       id:1,
