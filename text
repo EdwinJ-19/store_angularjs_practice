@@ -152,3 +152,10 @@ Services:
 Input/Output:
 => 1) @input/@output, binding, data pass
 => 2) @output, emit, event binding, function, data pass
+
+Custom Directives (ng g d ):
+=> you can define your own directives to attach the custom behaviour to the DOM element.
+=> you have to define the @Directive selector in html to display the behaviour.
+
+---> ElementRef: a wrapper around the native element of a view i.e. DOM element
+---> HostListener: Decorator that declares a DOM event to listen for, and provides a handler method to run when that event occurs. made for only angular and its same as javacsript decorator.

@@ -11,6 +11,7 @@ export class NavbarComponent{
   storeTitle:string = "Store";
   currDate = new Date();
   cartCount = 0;
+  showDropdown = false;
   
   constructor(private dataService: DataHandlerService) { 
     
@@ -23,5 +24,10 @@ export class NavbarComponent{
   ngOnInit(): void {
     
   }
+
+  onClickDropdown(){
+    this.showDropdown = !this.showDropdown;
+  }
+
 
 }

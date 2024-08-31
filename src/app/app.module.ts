@@ -8,6 +8,9 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { CustomPipePipe } from './custom-pipe.pipe';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { AddProductComponent } from './add-product/add-product.component';
+import { CustomDirective } from './custom.directive';
+import { ShowDropdownDirective } from './show-dropdown.directive';
+// import { CustomDirectivesDirective } from './custom-directives.directive';
 // import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
@@ -17,7 +20,9 @@ import { AddProductComponent } from './add-product/add-product.component';
     ProductlistComponent,
     CustomPipePipe,
     SearchFilterPipe,
-    AddProductComponent
+    AddProductComponent,
+    CustomDirective,
+    ShowDropdownDirective,
   ],
   imports: [
     BrowserModule,
