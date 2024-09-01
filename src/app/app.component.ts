@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Product } from './productlist/product';
 import { DataHandlerService } from './data-handler.service';
-// import { log } from 'console';
+import { interval, Observable, of } from 'rxjs';
+import { filter,map,take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,76 @@ export class AppComponent {
   searchProduct = "";
   // hideButton = true;
 
+  showSpinner: boolean = true;
 
-  ngOnInit(): void {
+
+  ngOnInit(): void{
     // console.log(this.products);
     this.electronicsProducts = this.electronicsProducts;
+
+    // const obs$ = new Observable((observer) => {
+    //   observer.next(1);
+    //   observer.next(2);
+    //   observer.next(3);
+    //   observer.next(4);
+    //   throw "My Error"
+    //   observer.complete()
+    // })
+
+    // obs$.subscribe(
+    //   (val)=>{
+    //     console.log(val);
+    //   },
+    //   (err)=>{
+    //     console.error(err);
+    //   },
+    //   ()=>{
+    //     console.log("Complete Callback")
+    //   }
+    // )
+
+    // const obs$ = of(1,2,3,4,5,6);
+
+    // const newObs$ = obs$.pipe(
+    //   map(
+    //     (val:number)=>{
+    //       return val**2
+    //     }
+    //   ),
+    //   filter(
+    //     (val: number)=>{
+    //       return val%2==0;
+    //     }
+    //   )
+    // )
+
+    // newObs$.subscribe(
+    //   (val)=>{
+    //     console.log(val);
+    //   },
+    //   (err)=>{
+    //     console.log(err);
+    //   },
+    //   ()=>{
+    //     console.log("complete");
+        
+    //   }
+    // )
+
+    const intervalObs$ = interval(3000).pipe(
+      take(2)
+    );
+    intervalObs$.subscribe(
+      (val) =>{
+        console.log(val);
+      },
+      (err)=>{
+
+      },
+      ()=>{
+        this.showSpinner = !this.showSpinner
+      }
+    )
   }
 
   onClickSubmit(){

@@ -10,6 +10,7 @@ import { SearchFilterPipe } from './search-filter.pipe';
 import { AddProductComponent } from './add-product/add-product.component';
 import { CustomDirective } from './custom.directive';
 import { ShowDropdownDirective } from './show-dropdown.directive';
+import { SpinnersComponent } from './spinners/spinners.component';
 // import { CustomDirectivesDirective } from './custom-directives.directive';
 // import { SearchFilterPipe } from './search-filter.pipe';
 
@@ -23,6 +24,7 @@ import { ShowDropdownDirective } from './show-dropdown.directive';
     AddProductComponent,
     CustomDirective,
     ShowDropdownDirective,
+    SpinnersComponent,
   ],
   imports: [
     BrowserModule,

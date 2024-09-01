@@ -8,7 +8,7 @@ export class ShowDropdownDirective {
   @Input() appShowDropdown !: any;
 
   constructor(private el: ElementRef) {
-    console.log(this.appShowDropdown)
+    // console.log(this.appShowDropdown)
    }
 
    ngOnInit(){

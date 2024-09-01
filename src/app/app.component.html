@@ -7,10 +7,31 @@
 
 <app-navbar></app-navbar>
 
-<!-- <h1 class="text-center py-3" [appHeader] = "'black'">Welcome to Store</h1> -->
-<h1 class="text-center py-3" appHeader = "black">Welcome to Store</h1>
-<!-- <app-add-product (sendData)="onGetData($event)"></app-add-product> -->
-<app-add-product></app-add-product>
+<!-- <div> -->
+  <!-- <app-spinners *ngIf="showSpinner; else productContainer"></app-spinners> -->
+  <!-- <ng-template #productContainer> -->
+    <!-- <h1 class="text-center py-3" [appHeader] = "'black'">Welcome to Store</h1> -->
+    <!-- <h1 class="text-center py-3" appHeader = "black">Welcome to Store</h1> -->
+    <!-- <app-add-product (sendData)="onGetData($event)"></app-add-product> -->
+    <!-- <app-add-product></app-add-product> -->
+    <!-- <app-productlist (sendId)="getData($event)"></app-productlist> -->
+    <!-- <app-productlist (sendId)="getData($event)" [products]="electronicsProducts"></app-productlist> -->
+    <!-- <app-productlist [products]="clothesProducts"></app-productlist> -->
+  <!-- </ng-template> -->
+<!-- </div> -->
+
+<div>
+  <app-spinners *ngIf="showSpinner"></app-spinners>
+  <ng-container *ngIf="!showSpinner">
+    <!-- <h1 class="text-center py-3" [appHeader] = "'black'">Welcome to Store</h1> -->
+    <h1 class="text-center py-3" appHeader = "black">Welcome to Store</h1>
+    <!-- <app-add-product (sendData)="onGetData($event)"></app-add-product> -->
+    <app-add-product></app-add-product>
+    <app-productlist (sendId)="getData($event)"></app-productlist>
+    <!-- <app-productlist (sendId)="getData($event)" [products]="electronicsProducts"></app-productlist> -->
+    <!-- <app-productlist [products]="clothesProducts"></app-productlist> -->
+  </ng-container>
+</div>
 
 <div class="container main-component">
   <!-- <button class="btn btn-primary" [disabled]="hideButton">Submit</button> -->
@@ -25,9 +46,5 @@
     <button class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
   </div> -->
 </div>
-
-<app-productlist (sendId)="getData($event)"></app-productlist>
-<!-- <app-productlist (sendId)="getData($event)" [products]="electronicsProducts"></app-productlist> -->
-<!-- <app-productlist [products]="clothesProducts"></app-productlist> -->
 
 

@@ -137,7 +137,8 @@ Disadvantages of Services:
 1) you have to create multiple file for multiple classes and also add the class name to every file inside of your parent class.
 
 when you are using Input and Output event method, so you have to add this object in ngOnInit not in constructor.
-Why? because constructor runs first before the input added inside and ngOnInit works like when the input and output does the works.
+Why? because [constructor] runs first before the input added inside and [ngOnInit] works like when the input and output does the works.
+
 
 
 ngDoCheck():- its updates ur object from directives in UI i.e. HTML like HTML:- *ngFor = "let allproducts of tempvalue", so to fix that we have to tell the angular to check whether it is changing or not.
@@ -157,5 +158,18 @@ Custom Directives (ng g d ):
 => you can define your own directives to attach the custom behaviour to the DOM element.
 => you have to define the @Directive selector in html to display the behaviour.
 
----> ElementRef: a wrapper around the native element of a view i.e. DOM element
+---> ElementRef: a wrapper around the native element of a view i.e. DOM element and it also render the object.
 ---> HostListener: Decorator that declares a DOM event to listen for, and provides a handler method to run when that event occurs. made for only angular and its same as javacsript decorator.
+
+object javascript:- {key:values}
+
+Promise:- one time data response, uses http.get("....").then((err))
+Observables:- 
+->objectlike observing,
+->streamlike one by one time data response, 
+->uses http.get("...").subscribe(),
+->if you are creating a variables, then you have to do it in ngOnInit, inside that const you have 
+->to add $ sign as well like - const obs$ = new Observable((observer)=>)
+->types of subscribe -> value (val), error (err), complete ()
+->of keywords uses like an array - const obs$ = of(1,2,3,4,5,6) without the help of observer class
+-> types of operator: map,filter,take etc etc and you have to manually type the imports in ur components file.

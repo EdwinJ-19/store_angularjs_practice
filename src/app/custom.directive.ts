@@ -12,7 +12,7 @@ export class CustomDirective {
   }
 
   @HostListener('mouseenter') onMouseEnter(){
-    console.log(this.appHeader)
+    // console.log(this.appHeader)
     this.el.nativeElement.style.backgroundColor = this.appHeader
     this.el.nativeElement.style.color = 'white'
   }
