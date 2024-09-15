@@ -27,24 +27,11 @@
     <h1 class="text-center py-3" appHeader = "black">Welcome to Store</h1>
     <!-- <app-add-product (sendData)="onGetData($event)"></app-add-product> -->
     <app-add-product></app-add-product>
-    <app-productlist (sendId)="getData($event)"></app-productlist>
+    <!-- <app-productlist (sendId)="getData($event)"></app-productlist> -->
     <!-- <app-productlist (sendId)="getData($event)" [products]="electronicsProducts"></app-productlist> -->
     <!-- <app-productlist [products]="clothesProducts"></app-productlist> -->
+    <router-outlet></router-outlet>
   </ng-container>
-</div>
-
-<div class="container main-component">
-  <!-- <button class="btn btn-primary" [disabled]="hideButton">Submit</button> -->
-  <!-- <input type="text" (input)="onInputChanges($event)" class="form-control" placeholder="Search some products">
-  <p>{{searchProduct}}</p> -->
-  <!-- <div class="main-button"> -->
-    <!-- <button class="btn btn-primary" (click)="onClickSubmit()">Submit</button> -->
-  <!-- </div> -->
-
-  <!-- <input type="text" [(ngModel)]="searchProduct" class="form-control" placeholder="Search some products"> -->
-  <!-- <div class="main-button">
-    <button class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
-  </div> -->
 </div>
 
 

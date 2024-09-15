@@ -53,7 +53,7 @@ ng new projectname
 
 7) to install boostrap, write npm install bootstrap in terminal
 
-8) now to add boostrap css in the global file that is angular.json, now search styles in angular and add one line that is "node_modules/bootstrap/dist/css/bootstrap.min.css" same as scripts as well.
+8) now to add boostrap css in the global file that is "angular.json", now search styles in angular and add one line that is "node_modules/bootstrap/dist/css/bootstrap.min.css" same as scripts as well.
 
 
 DATA BINDING:-
@@ -64,7 +64,7 @@ DATA BINDING:-
 
 
 --> if you want make custom datatype then create a interface which helps you to customize the known properties, like below:
-interface Product{
+export interface Product{
   name:string,
   price:number,
   description:string,
@@ -119,7 +119,7 @@ Events:-
 emit() : it is a object function from EventEmitter().
 
 advantages of OUTPUT and INPUT:-
-1) you can add this output and input method in such small components for it like search filter.
+1) you can add this output and input method in such small components for like search filter.
 
 disadvantage of OUTPUT and INPUT:-
 1) if you are doing output event directly then you will get an output only but not the response from the input, so to use that we have to uses services.
@@ -173,3 +173,25 @@ Observables:-
 ->types of subscribe -> value (val), error (err), complete ()
 ->of keywords uses like an array - const obs$ = of(1,2,3,4,5,6) without the help of observer class
 -> types of operator: map,filter,take etc etc and you have to manually type the imports in ur components file.
+
+API:-
+-> import httpclient module in app.module.ts and import it in services
+using with django and xampp for sql database
+getmethod:-
+postmethod:-
+
+
+ROUTE:-
+-> import RouterModule in app.module.ts
+-> then create a variables for path routes like below,
+const routes = [
+  {path: '', component: ProductlistComponent},
+  {path: 'about-us', component: AboutUsComponent}
+]
+-> then write in imports:[
+  RouterModule.forRoot(routes)
+] 
+-> after this add in app.component to display all of the values, to show that in tag that is,
+<router-outlet></router-outlet>
+-> now to use in html tag, for that you have to write,
+            <a class="nav-link" routerLink="/about-us">About Us</a>

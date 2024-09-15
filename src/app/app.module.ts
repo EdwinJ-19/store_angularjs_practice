@@ -11,8 +11,16 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { CustomDirective } from './custom.directive';
 import { ShowDropdownDirective } from './show-dropdown.directive';
 import { SpinnersComponent } from './spinners/spinners.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
 // import { CustomDirectivesDirective } from './custom-directives.directive';
 // import { SearchFilterPipe } from './search-filter.pipe';
+
+const routes = [
+  {path: '', component: ProductlistComponent},
+  {path: 'about-us', component: AboutUsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -25,10 +33,13 @@ import { SpinnersComponent } from './spinners/spinners.component';
     CustomDirective,
     ShowDropdownDirective,
     SpinnersComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

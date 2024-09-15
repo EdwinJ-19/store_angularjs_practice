@@ -19,7 +19,8 @@ export class AppComponent {
 
   ngOnInit(): void{
     // console.log(this.products);
-    this.electronicsProducts = this.electronicsProducts;
+    // this.electronicsProducts = this.electronicsProducts;
+    this.dataService.getElectronicsProducts;
 
     // const obs$ = new Observable((observer) => {
     //   observer.next(1);
@@ -70,8 +71,8 @@ export class AppComponent {
     //   }
     // )
 
-    const intervalObs$ = interval(3000).pipe(
-      take(2)
+    const intervalObs$ = interval(2000).pipe(
+      take(1)
     );
     intervalObs$.subscribe(
       (val) =>{
@@ -90,10 +91,10 @@ export class AppComponent {
     console.log("Button Clicked");
   }
 
-  onInputChanges(event:any){
-    // console.log(event.target.value); //the target means to target the input field and values shows the values of the input inside itself.
-    this.searchProduct = event.target.value;
-  }
+  // onInputChanges(event:any){
+  //   // console.log(event.target.value); //the target means to target the input field and values shows the values of the input inside itself.
+  //   this.searchProduct = event.target.value;
+  // }
 
   electronicsProducts : Product[] = [
     {

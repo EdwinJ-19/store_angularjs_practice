@@ -34,7 +34,18 @@ export class AddProductComponent implements OnInit {
   onClickSubmitElectronics(){
     // console.log(this.sendData);
     // this.sendData.emit(this.productObj)
-    this.dataService.electronicsProducts.push(this.productObj);
+    // this.dataService.electronicsProducts.push(this.productObj);
+
+    const newObj = {
+      name: this.productObj.name,
+      price: this.productObj.price,
+      description: this.productObj.description,
+      category: this.productObj.category,
+      stock: this.productObj.stock,
+    }
+
+    this.dataService.postElectronicsProducts(newObj);
+
     this.productObj = {
       id:0,
       name:"",

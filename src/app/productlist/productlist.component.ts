@@ -170,6 +170,8 @@ export class ProductlistComponent implements OnInit {
     this.tempValue = this.dataService.electronicsProducts.filter((prod)=>{
       return prod.name.toLowerCase().includes(typedValue.toLowerCase());
     })
+    console.log(this.tempValue);
+    
     // this.tempValue1 = this.clothesProducts.filter((prod)=>{
     //   return prod.name.toLowerCase().includes(typedValue.toLowerCase());
     // })
