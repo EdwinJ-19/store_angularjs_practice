@@ -195,3 +195,31 @@ const routes = [
 <router-outlet></router-outlet>
 -> now to use in html tag, for that you have to write,
             <a class="nav-link" routerLink="/about-us">About Us</a>
+
+-> to display the particular id, you have to create another component to show the electronics product component, to do like this,
+  {path: 'product/:id', component: ProductComponent},
+-> after putting the product id in app.module.ts, now to assign this value in ur property binding using routerlink like this, 
+                <a [routerLink]="['product', electronics.id]"></a>
+-> from product.ts,
+constructor(private route: ActivatedRoute) {
+    // this indicates to show the id of the product
+    this.route.params.subscribe((data)=>{
+      console.log(data);
+    })
+   }
+-> if the page is not found, then you have to write the redirectTo to the error 404 page.
+  {path: '404', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '404'}
+
+
+  FORMS:-
+  -> two types of forms that is template driven and reactive forms
+  
+  1) template driven:-
+  --> done in ng model
+  --> uses for get/post with action included.
+  --> including events with action.
+
+  2) reactive forms
+  --> advanced forms
+  --> but different from template driven.

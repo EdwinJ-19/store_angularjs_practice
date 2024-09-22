@@ -19,8 +19,8 @@ export class AppComponent {
 
   ngOnInit(): void{
     // console.log(this.products);
-    // this.electronicsProducts = this.electronicsProducts;
-    this.dataService.getElectronicsProducts;
+    this.electronicsProducts = this.electronicsProducts;
+    // this.dataService.getElectronicsProducts;
 
     // const obs$ = new Observable((observer) => {
     //   observer.next(1);

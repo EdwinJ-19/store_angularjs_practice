@@ -6,36 +6,41 @@
     </a>
   </p>
   <div class="collapse" id="collapseExample" style="margin: 1rem 0;">
-    <div class="card card-body">
-      <div>
+    <form (ngSubmit)="onClickSubmitElectronics()" class="card card-body">
+      <!-- <div>
           <label for="product-id">Id</label><input [(ngModel)] = "productObj.id" class="form-control" id="product-id" type="number">
-      </div>
+      </div> -->
       <div>
         <!-- <label for="product-name">Name</label><input [()] = "productObj.name" class="form-control" id="product-name" type="text"> -->
-        <label for="product-name">Name</label><input [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
+        <label for="product-name">Name</label>
+        <input name="product-name" [(ngModel)] = "productObj.name" class="form-control" id="product-name" type="text">
       </div>
       <div>
-        <label for="product-description">Description</label><input [(ngModel)] = "productObj.description" class="form-control" id="product-description" type="text">
+        <label for="product-description">Description</label>
+        <input name="product-description" [(ngModel)] = "productObj.description" class="form-control" id="product-description" type="text">
       </div>
       <div>
-        <label for="product-price">Price</label><input [(ngModel)] = "productObj.price" class="form-control" id="product-price" type="number">
+        <label for="product-price">Price</label>
+        <input name="product-price" [(ngModel)] = "productObj.price" class="form-control" id="product-price" type="number">
       </div>
       <div>
-        <label for="product-category">Category</label><input [(ngModel)] = "productObj.category" class="form-control" id="product-category" type="text">
+        <label for="product-category">Category</label>
+        <input name="product-category" [(ngModel)] = "productObj.category" class="form-control" id="product-category" type="text">
       </div>
       <div>
         <!-- <label for="product-stock">Stock</label><input [(ngModel)] = "productObj.stock" class="form-control" id="product-stock" type="text"> -->
         <label for="product-stock">Stock</label>
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." [(ngModel)] = "productObj.stock">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." name="product-stock" [(ngModel)] = "productObj.stock">
           <datalist id="datalistOptions">
             <option value="In Stock">
             <option value="Not In Stock">
           </datalist>
       </div>
       <div>
-        <button style="margin: 1rem 0;" (click)="onClickSubmitElectronics()" class="btn btn-primary">Submit</button>
+        <!-- <button style="margin: 1rem 0;" (click)="onClickSubmitElectronics()" class="btn btn-primary">Submit</button> -->
+        <button type="submit">Submit</button>
       </div>
-    </div>
+    </form>
   </div>
 
 </div>

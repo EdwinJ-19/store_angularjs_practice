@@ -14,12 +14,17 @@ import { SpinnersComponent } from './spinners/spinners.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ProductComponent } from './product/product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { CustomDirectivesDirective } from './custom-directives.directive';
 // import { SearchFilterPipe } from './search-filter.pipe';
 
 const routes = [
   {path: '', component: ProductlistComponent},
-  {path: 'about-us', component: AboutUsComponent}
+  {path: 'about-us', component: AboutUsComponent},
+  {path: 'product/:id', component: ProductComponent},
+  {path: '404', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '404'}
 ]
 
 @NgModule({
@@ -34,6 +39,8 @@ const routes = [
     ShowDropdownDirective,
     SpinnersComponent,
     AboutUsComponent,
+    ProductComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

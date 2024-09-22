@@ -34,7 +34,7 @@ export class AddProductComponent implements OnInit {
   onClickSubmitElectronics(){
     // console.log(this.sendData);
     // this.sendData.emit(this.productObj)
-    // this.dataService.electronicsProducts.push(this.productObj);
+    this.dataService.electronicsProducts.push(this.productObj);
 
     const newObj = {
       name: this.productObj.name,
@@ -44,7 +44,8 @@ export class AddProductComponent implements OnInit {
       stock: this.productObj.stock,
     }
 
-    this.dataService.postElectronicsProducts(newObj);
+    // this.dataService.postElectronicsProducts(newObj);
+    // this.dataService.electronicsProducts();
 
     this.productObj = {
       id:0,
